@@ -1,0 +1,443 @@
+/* RESET E VARIABILI */
+:root {
+    --primary-color: #002D72; /* Blu professionale */
+    --secondary-color: #D31145; /* Rosso per i pulsanti */
+    --text-color: #333333;
+    --light-bg: #f4f6f8;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.light-bg {
+    background-color: var(--light-bg);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+/* NAVBAR AGGIORNATA */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.98); /* Leggermente trasparente per eleganza */
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+.nav-container {
+    max-width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Spazio tra logo e nome */
+}
+
+.logo-img {
+    height: 80px; /* Logo ingrandito (era 60px) */
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
+}
+
+.company-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    letter-spacing: -1px;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s;
+    text-transform: uppercase;
+}
+
+/* Modifica alla sezione Hero per non coprire la navbar più alta */
+.hero {
+    padding-top: 110px; /* Aumentato per compensare il logo più grande */
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo img {
+    height: 60px; /* Altezza del logo */
+    object-fit: contain;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--secondary-color);
+}
+
+/* HERO SECTION (HOME) */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* Inseriamo la tua immagine con un overlay scuro per far leggere il testo */
+    background: linear-gradient(rgba(0, 45, 114, 0.6), rgba(0, 45, 114, 0.6)), 
+                url('immagine\ sfondo\ home.png') center/cover no-repeat;
+    color: var(--white);
+    padding-top: 80px;
+}
+
+.hero h1 {
+    color: var(--white);
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    font-weight: 800;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5); /* Ombra per aumentare la leggibilità */
+}
+
+.hero h2 {
+    color: #f1c40f; /* Giallo dal logo */
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+
+.hero h1 {
+    color: var(--white);
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    font-weight: 800;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5); /* Ombra per aumentare la leggibilità */
+}
+
+.hero h2 {
+    color: #f1c40f; /* Giallo dal logo */
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+
+.hero h1 {
+    color: var(--white);
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+.hero h2 {
+    color: #f1c40f; /* Giallo dal logo */
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+/* BOTTONI */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+}
+
+.btn-tinte {
+    background: linear-gradient(135deg, #D31145 0%, #A30D35 100%);
+    color: white !important;
+    box-shadow: 0 10px 20px rgba(211, 17, 69, 0.3);
+}
+
+
+.btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* CHI SIAMO */
+.history-text p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* --- STILE CERTIFICAZIONE PREMIUM --- */
+.certificazione-premium {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin: 50px auto;
+    max-width: 800px;
+    gap: 30px;
+    border: 1px solid #eee;
+}
+
+.cert-img-container {
+    flex: 0 0 180px; /* Dimensione fissa per l'immagine */
+}
+
+.img-badge {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.img-badge:hover {
+    transform: scale(1.05); /* Effetto zoom leggero al passaggio del mouse */
+}
+
+.cert-descrizione h3 {
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    color: var(--primary-color);
+}
+
+.cert-descrizione p {
+    font-size: 1rem !important;
+    color: #555;
+    margin-bottom: 0 !important;
+}
+
+/* Adattamento per cellulari */
+@media (max-width: 600px) {
+    .certificazione-premium {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    .cert-img-container {
+        flex: 0 0 120px;
+        max-width: 1200px;
+    }
+}
+
+/* PRODOTTI */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.product-card {
+    background-color: var(--white);
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    /* Cambiato da var(--primary-color) a un giallo ocra */
+    border-bottom: 4px solid #f1c40f; 
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    /* Al passaggio del mouse la linea diventa rossa come i bottoni */
+    border-color: var(--secondary-color); 
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+/* CONTATTI */
+.contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.contact-info, .contact-map {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-info p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.contact-info a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* ANIMAZIONI DI BASE */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* RESPONSIVE PER CELLULARI */
+@media (max-width: 768px) {
+    .nav-links { display: none; /* In un progetto completo qui andrebbe un menu ad hamburger */ }
+    .hero h1 { font-size: 2.5rem; }
+    .hero h2 { font-size: 1.5rem; }
+}
+.hero-buttons, .product-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* Evitiamo che i tasti siano troppo larghi su schermi piccoli */
+@media (max-width: 480px) {
+    .btn {
+        width: 100%;        /* Tasto a tutta larghezza su cellulari piccoli */
+        justify-content: center;
+    }
+}
+/* --- SEZIONE CONTATTI AGGIORNATA --- */
+.contact-header-inline {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.contact-logo {
+    height: 80px; /* Dimensione del logo nei contatti */
+    width: auto;
+    object-fit: contain;
+}
+
+.contact-titles h3 {
+    margin: 0;
+    font-size: 1.8rem;
+    line-height: 1.2;
+}
+
+.contact-titles .subtitle {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+}
+
+.contact-details p {
+    margin-bottom: 18px;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+.contact-details i {
+    color: var(--secondary-color); /* Le icone saranno rosse come i bottoni */
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+.contact-details a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-details a:hover {
+    color: var(--secondary-color);
+}
+
+/* Ottimizzazione per smartphone */
+@media (max-width: 480px) {
+    .contact-header-inline {
+        flex-direction: column;
+        text-align: center;
+    }
+    .contact-logo {
+        height: 100px;
+    }
+}
